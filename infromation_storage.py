@@ -1,7 +1,5 @@
 
 #inputing information
-#infos = []
-
 while True:
     name = input("Name: ")
     if not len(name) > 0:
@@ -28,13 +26,16 @@ while True:
         print("Invalid")
         continue
 
+    #putting the inputs in a txt file
     with open("./output.txt", "a") as file_handle:
-        file_handle.write(f"Name:{name}")
-        file_handle.write(f"birthdate:{birthdate}")
-        file_handle.write(f"section:{section}")
-        file_handle.write(f"address:{address}")
-        file_handle.write(f"email:{email}")
+        file_handle.write(f"Name:{name}\n")
+        file_handle.write(f"birthdate:{birthdate}\n")
+        file_handle.write(f"section:{section}\n")
+        file_handle.write(f"address:{address}\n")
+        file_handle.write(f"email:{email}\n")
+        file_handle.write(f" \n")
 
+    #ask for new entry
     new_entry = input("Give new entry?(yes or no): ")
     if new_entry == "no":
         break
