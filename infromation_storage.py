@@ -1,8 +1,8 @@
 
 #inputing information
 while True:
-    name = input("Fullname: ")
-    if not len(name) > 0:
+    fullname = input("Fullname: ")
+    if not len(fullname) > 0:
         print("Invalid")
         continue
 
@@ -33,7 +33,7 @@ while True:
 
     #putting the inputs in a txt file
     with open("./output.txt", "a") as file_handle:
-        file_handle.write(f"Name:{name}\n")
+        file_handle.write(f"Fullname:{fullname}\n")
         file_handle.write(f"birthdate:{birthdate}\n")
         file_handle.write(f"section:{section}\n")
         file_handle.write(f"address:{address}\n")
@@ -45,8 +45,3 @@ while True:
     new_entry = input("Give new entry?(yes or no): ")
     if new_entry == "no":
         break
-
-
-
-
-
