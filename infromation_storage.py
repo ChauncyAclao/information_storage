@@ -1,6 +1,6 @@
 
 #inputing information
-infos = []
+#infos = []
 
 while True:
     name = input("Name: ")
@@ -28,22 +28,18 @@ while True:
         print("Invalid")
         continue
 
-    infos.append({
-        "name" : name,
-        "birthdate" : birthdate,
-        "section" : section,
-        "adress" : address,
-        "email" : email
-    })
-
     with open("./output.txt", "a") as file_handle:
-        file_handle.write(name)
+        file_handle.write(f"Name:{name}")
+        file_handle.write(f"birthdate:{birthdate}")
+        file_handle.write(f"section:{section}")
+        file_handle.write(f"address:{address}")
+        file_handle.write(f"email:{email}")
 
     new_entry = input("Give new entry?(yes or no): ")
     if new_entry == "no":
         break
 
-print(infos)
+
 
 
 
