@@ -42,5 +42,8 @@ while True:
 
 print(infos)
 
+with open("./output.txt", "a") as file_handle:
+        file_handle.write(infos)
+
 
 
