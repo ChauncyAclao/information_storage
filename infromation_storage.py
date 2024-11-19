@@ -36,14 +36,14 @@ while True:
         "email" : email
     })
 
+    with open("./output.txt", "a") as file_handle:
+        file_handle.write(name)
+
     new_entry = input("Give new entry?(yes or no): ")
     if new_entry == "no":
         break
 
 print(infos)
-
-with open("./output.txt", "a") as file_handle:
-        file_handle.write(infos)
 
 
 
