@@ -6,3 +6,8 @@ with open("./output.txt", "r") as file:
     for info in infos:
         if f"Fullname:{name}" in info:
             print(info)
+            break
+
+        if f"Fullname:{name}" not in info:
+            print(f"No Info on:{name}")
+            break
